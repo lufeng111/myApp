@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-button>
+      <ion-back-button></ion-back-button>
+    </ion-button>
+    <ion-title>
+      Tab Three
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <p>
+    <button ng-click="openPopover($event)">打开浮动框</button>
+    </p>
+    <script id="my-popover.html" type="text/ng-template">
+    <ion-popover-view>
+      <ion-header-bar>
+        <h1 class="title">我的浮动框标题</h1>
+      </ion-header-bar>
+      <ion-content>
+        Hello!
+      </ion-content>
+    </ion-popover-view>
+    </script>
+
+</ion-content>

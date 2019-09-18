@@ -1,0 +1,69 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div style="margin-top: 20px;">欢迎登陆app请点击登陆导航到home组件</div>
+<!-- <ion-button shape="round" color="medium" routerLink="/tabs">请点击登陆</ion-button><br><br><br><br><br> -->
+<ion-button shape="round" color="medium" (click)="login()">请点击登陆</ion-button><br><br><br><br><br>
+
+
+<!-- 测试按钮 -->
+<!-- 按钮默认颜色是primary -->
+  <ion-button>Default</ion-button>
+  <ion-button href="#">Anchor</ion-button>
+  <br><br><br>
+  <!-- color="控制按钮的颜色" 其他样式默认 -->
+  <ion-button color="primary">Primary</ion-button>
+  <ion-button color="secondary">Secondary</ion-button>
+  <ion-button color="tertiary">Tertiary</ion-button>
+  <ion-button color="success">Success</ion-button>
+  <ion-button color="warning">Warning</ion-button>
+  <ion-button color="danger">Danger</ion-button>
+  <ion-button color="light">Light</ion-button>
+  <ion-button color="medium">Medium</ion-button>
+  <ion-button color="dark">Dark</ion-button>
+  <br><br><br>
+  <!-- expand 把按钮设置成全宽按钮 -->
+  <ion-button expand="full">Full Button</ion-button>
+  <!-- full: 全角全宽按钮，左右无边框。 -->
+  <ion-button expand="block">Block Button</ion-button>
+  <!-- block: 带圆角的全宽按钮。 -->
+  <br><br><br>
+  <!-- shape: 形状圆形 -->
+  <ion-button shape="round">Round Button</ion-button>
+  <br><br><br>
+  <!-- full: 属性确定按钮的背景和边框颜色  有三个属性值clear,solid,outline: 具有透明背景和可见边框的按钮 -->
+  <ion-button expand="full" fill="outline">Outline + Full</ion-button>
+  <ion-button expand="block" fill="outline">Outline + Block</ion-button>
+  <ion-button shape="round" fill="outline">Outline + Round</ion-button>
+  <!-- clear: 具有类似于平面按钮的透明背景的按钮。透明边框透明背景 -->
+  <ion-button shape="round" fill="clear">clear + Round</ion-button>
+  <!-- solid: 带填充背景的按钮。用于工具栏中的按钮。 -->
+  <ion-button shape="round" fill="solid">solid + Round</ion-button>
+  <br><br><br>
+  
+  <ion-button>
+    <!-- <ion-icon> 是图标按钮标签，图标是name="star", slot是图标的位置插入的位置  -->
+    <ion-icon slot="start" name="star"></ion-icon>
+    Left Icon
+  </ion-button>
+  
+  <ion-button>
+    Right Icon
+    <ion-icon slot="end" name="star"></ion-icon>
+  </ion-button>
+  
+  <ion-button>
+    <!-- 添加 slot="icon-only" 图标会变大  -->
+    <ion-icon slot="icon-only" name="star"></ion-icon>
+  </ion-button>
+  <br><br><br>
+  <!-- 按钮的大小 -->
+  <ion-button size="large">Large</ion-button>
+  <ion-button>Default</ion-button>
+  <ion-button size="small">Small</ion-button>
+
+</ion-content>
