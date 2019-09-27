@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -9,17 +10,20 @@ import { NavController } from '@ionic/angular';
 export class LoginPage implements OnInit {
 
   constructor(
-    // public routes: Routes,
-    // public nav: NavController
+    public router: Router,
+    public nav: NavController
   ) { }
 
   ngOnInit() {
   }
 
-  // login(){
-  //   this.routes.navigate('/tabs');
-  //   console.log("hahahaha")
-  // }
+  login(){
+    // 以下三种方式都能导航到home页面
+    this.router.navigateByUrl('/tabs');
+    // this.router.navigate(['/tabs']);
+    // this.nav.navigateForward('/tabs');
+    console.log("hahahaha")
+  }
 
 
 

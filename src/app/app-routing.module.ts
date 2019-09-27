@@ -8,8 +8,9 @@ const routes: Routes = [
   // router编译是从上到下编译的
   // { path: '', component: LoginPage },
   // 使用这种写法可以直接链接到
-  // {path: '', loadChildren: () => import('./pages/login/Login.module').then(m => m.LoginPageModule)},
+  {path: '', loadChildren: () => import('./pages/login/Login.module').then(m => m.LoginPageModule)},
   {
+    // 注意path: 'tabs'会报错： Cannot match any routes. URL Segment: 'tabs/home' 
     path: '', loadChildren: () => import('./pages/tabs/tabs.module').then(m => m.TabsPageModule)
     
     // loadChildren: './pages/tabs/tabs.module#TabsPageModule'

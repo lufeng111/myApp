@@ -1,14 +1,134 @@
 <ion-header>
   <ion-toolbar>
-    <ion-button>
-      <ion-back-button></ion-back-button>
+    <!-- 返回按钮 -->
+    <ion-button (click)=goBack() color="medium">
+        <ion-icon name="arrow-back"></ion-icon>
     </ion-button>
     <ion-title>home</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-我是home组件
+<div style="margin-top: 20px;">我是home组件，父组件，输入输出属性</div>
+<div>
+  我是主组件
+  <ion-input class="inp" type="text" placeholder="请输入ID" [(ngModel)]="ID"></ion-input>
+  <ion-input class="inp" type="number" [(ngModel)]="Mount" placeholder="请输入数量"></ion-input>
+</div>
+<ion-button> 点击我跳转到list页面，使用angular输入属性传入相应的值</ion-button>
+<div style="border-top: 1px solid #000;">
+  <app-list [productId]="ID" [productMount]="Mount"></app-list>
+</div>
+<!-- <ion-list> 的使用 -->
+<ion-list>
+  <ion-item>
+    <ion-label>Pokémon Yellow</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label>Mega Man</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label>The Legend of Zelda</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label>Pac-Manio</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label>Super Mario World</ion-label>
+  </ion-item>
+</ion-list>
+<br><br><br><br>
+
+<ion-list>
+  <ion-item>
+    <ion-label>Input</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Toggle</ion-label>
+    <ion-toggle slot="end"></ion-toggle>
+  </ion-item>
+  <ion-item>
+    <ion-label>Radio</ion-label>
+    <ion-radio slot="end"></ion-radio>
+  </ion-item>
+  <ion-item>
+    <ion-label>Checkbox</ion-label>
+    <ion-checkbox></ion-checkbox>
+  </ion-item>
+</ion-list>
+<br><br><br><br>
+
+<ion-list>
+  <ion-item-sliding>
+    <ion-item>
+      <ion-label>Item</ion-label>
+    </ion-item>
+    <ion-item-options side="end">
+      <!-- <ion-item-option (click)="unread(item)">Unread</ion-item-option> -->
+      <ion-item-option>Unread</ion-item-option>
+    </ion-item-options>
+  </ion-item-sliding>
+
+  <ion-item-sliding>
+    <ion-item>
+      <ion-label>Item</ion-label>
+    </ion-item>
+    <ion-item-options side="end">
+      <!-- <ion-item-option (click)="unread(item)">Unread</ion-item-option> -->
+      <ion-item-option>Unread</ion-item-option>
+    </ion-item-options>
+  </ion-item-sliding>
+</ion-list>
+
+
+  
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<!-- 下面是 <ion-input> 的简单使用 -->
+<ion-input class="inp"></ion-input>
+
+<!-- <ion-input> 标签 value默认值custom -->
+  <ion-input class="inp" value="custom"></ion-input>
+  
+  <!-- placeholder 在input内输入value placeholder 会消失，起到提示的作用 -->
+  <ion-input class="inp" placeholder="Enter Input"></ion-input>
+  
+  <!-- clearInput 显示清除图标，当输入框中有value值时，点击清除图标，就可以清空value值-->
+  <ion-input class="inp" clearInput value="clear me"></ion-input>
+  
+  <!-- type类型是number，输入框是会出现向上或向下的箭头，点击可以增加默认的value的值  -->
+  <ion-input class="inp" type="number" value="333"></ion-input>
+  
+  <!-- Disabled 输入框禁用掉 -->
+  <ion-input class="inp" value="Disabled" disabled></ion-input>
+  
+  <!-- readonly 输入框只能显示value的值，但是不能修改 -->
+  <ion-input class="inp" value="Readonly" readonly></ion-input>
+  
+  <!-- 用 <ion-item> 标签包裹的input是在一行显示 -->
+  <ion-item>
+    <ion-label>Default Label</ion-label>
+    <!-- <ion-input class="inp"></ion-input> -->
+    <ion-input></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label position="floating">Floating Label</ion-label>
+    <ion-input class="inp"></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label position="fixed">Fixed Label</ion-label>
+    <ion-input class="inp"></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label position="stacked">Stacked Label</ion-label>
+    <ion-input class="inp"></ion-input>
+  </ion-item>
 
 
 

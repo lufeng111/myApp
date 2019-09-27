@@ -12,6 +12,7 @@ const routes: Routes = [
     path: 'tabs',
     component: TabsPage,
     children: [
+      // children 组件下的path是没有先后顺序的
       {
         path: 'tab1',
         children: [
@@ -55,14 +56,14 @@ const routes: Routes = [
       },
       {
         path: '',
-        redirectTo: '/tabs/tab1',
+        redirectTo: '/tabs/home',
         pathMatch: 'full'
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/tabs/tab1',
+    redirectTo: '/tabs/home',
     pathMatch: 'full'
   }
 ];
