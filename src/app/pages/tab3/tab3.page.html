@@ -10,18 +10,53 @@
 </ion-header>
 
 <ion-content>
-  <p>
-    <button ng-click="openPopover($event)">打开浮动框</button>
-    </p>
-    <script id="my-popover.html" type="text/ng-template">
-    <ion-popover-view>
-      <ion-header-bar>
-        <h1 class="title">我的浮动框标题</h1>
-      </ion-header-bar>
-      <ion-content>
-        Hello!
-      </ion-content>
-    </ion-popover-view>
-    </script>
+  <!-- ion-input　事件(Events) -->
+  <!-- 
+  
+    ionBlur 当输入失去焦点时发出。
+    ionChange 值更改时发出。
+    ionFocus 当输入有焦点时发出。
+    ionInput 当键盘输入出现时发出。
+
+   -->
+   <!-- ion-input　内置方法(Methods) -->
+   <!-- 
+     getInputElement
+    -->
+
+    <ion-input class="inp"></ion-input>
+
+
+    <ion-textarea class="inp"></ion-textarea>
+    
+    <ion-item>
+        <ion-textarea placeholder="Enter more information here..."></ion-textarea>
+    </ion-item>
+
+    <ion-item>
+        <ion-label position="floating">Description</ion-label>
+        <ion-textarea placeholder="Enter more information here..."></ion-textarea>
+    </ion-item>
+
+    <ion-item>
+        <ion-label position="stacked">Summary</ion-label>
+        <ion-textarea disabled readonly value="Ionic enables developers to build performant, high-quality mobile apps."></ion-textarea>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>Commenti</ion-label>
+        <ion-textarea clearOnEdit="true"></ion-textarea>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>Notes</ion-label>
+        <!-- 
+          row：行
+          col：列
+         -->
+        <ion-textarea class="inp" rows="6" cols="20" placeholder="Enter any notes here..."></ion-textarea>
+    </ion-item>
+
+
 
 </ion-content>

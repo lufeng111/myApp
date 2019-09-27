@@ -9,17 +9,17 @@
 </ion-header>
 
 <ion-content>
-<div style="margin-top: 20px;">我是home组件，父组件，输入输出属性</div>
-<div>
-  我是主组件
-  <ion-input class="inp" type="text" placeholder="请输入ID" [(ngModel)]="ID"></ion-input>
-  <ion-input class="inp" type="number" [(ngModel)]="Mount" placeholder="请输入数量"></ion-input>
-</div>
-<ion-button> 点击我跳转到list页面，使用angular输入属性传入相应的值</ion-button>
-<div style="border-top: 1px solid #000;">
-  <app-list [productId]="ID" [productMount]="Mount"></app-list>
-</div>
+  <h1>我是首页，Home组件</h1>
+  <!-- <ion-button routerLink="/">点击跳转到list组件</ion-button> -->
+
+  <!-- <app-product></app-product> -->
+  <app-list></app-list>
+
+
+  
+  <br><br><br><br><br><br><br><br>
 <!-- <ion-list> 的使用 -->
+  <!-- 第一种列表 -->
 <ion-list>
   <ion-item>
     <ion-label>Pokémon Yellow</ion-label>
@@ -46,14 +46,17 @@
   </ion-item>
   <ion-item>
     <ion-label>Toggle</ion-label>
+    <!-- 切换框 -->
     <ion-toggle slot="end"></ion-toggle>
   </ion-item>
   <ion-item>
     <ion-label>Radio</ion-label>
+    <!-- 圆形选择框 -->
     <ion-radio slot="end"></ion-radio>
   </ion-item>
   <ion-item>
     <ion-label>Checkbox</ion-label>
+    <!-- 方框选择框 -->
     <ion-checkbox></ion-checkbox>
   </ion-item>
 </ion-list>

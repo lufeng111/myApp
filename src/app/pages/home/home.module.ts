@@ -3,12 +3,11 @@ import { CommonModule } from '@angular/common';
 // 使用input输入框需要引入FormsModule模块
 import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
-
 import { IonicModule } from '@ionic/angular';
-
 import { HomePage } from './home.page';
-import { ListComponent } from '../list/list.component';
-import { PriceComponent } from '../price/price.component';
+import { ComponentsModule } from '../../components/components.module';
+
+
 
 const routes: Routes = [
   {
@@ -22,8 +21,15 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
+    // 导入ComponentsModule
+    ComponentsModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [HomePage, ListComponent, PriceComponent]
+  declarations: [
+    HomePage,
+  ],
+  // exports: [
+  //   ComponentsModule
+  // ]
 })
 export class HomePageModule {}

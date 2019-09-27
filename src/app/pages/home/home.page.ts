@@ -1,9 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Route, Router } from '@angular/router';
 import { NavController } from '@ionic/angular';
-import { DetailPage } from '../detail/detail.page';
-import {PriceRandom} from '../price/price.component';
-
 
 @Component({
   selector: 'app-home',
