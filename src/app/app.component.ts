@@ -6,6 +6,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 @Component({
   selector: 'app-root',
+  // 模板是组件的必备属性
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.scss']
 })

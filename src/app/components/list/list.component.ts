@@ -8,7 +8,9 @@ import { Component, OnInit, Input } from '@angular/core';
 export class ListComponent implements OnInit {
 
   @Input()
-  productId: string;
+  productName: string;
+  @Input()
+  productId: number;
   @Input()
   productMount: number;
 
@@ -16,10 +18,10 @@ export class ListComponent implements OnInit {
   
   // 输入属性用于给有父子关系的组件进行传值，并且是单向的，对比区别路由参数的传值
   ngOnInit() {
-    // 1秒后改变productId 的值
+    // 1秒后改变productId 的值,子组件的值改变不会影响父组件的值得变化
     setInterval(() => {
-      this.productId = "ahhahhaha";
-    }, 1000)
+      this.productName = "我换名字啦";
+    }, 5000)
   }
 
 }

@@ -9,7 +9,8 @@ import { NavController } from '@ionic/angular';
 })
 export class HomePage implements OnInit {
 
-  ID: string;
+  name: string;
+  ID: number;
   Mount: number;
 
   constructor(

@@ -10,10 +10,17 @@
 
 <ion-content>
   <h1>我是首页，Home组件</h1>
-  <!-- <ion-button routerLink="/">点击跳转到list组件</ion-button> -->
+  <input type="string" [(ngModel)]="name" placeholder="请输入商品名称">
+  <br>
+  <input type="number" [(ngModel)]="ID" placeholder="商品ID">
+  <br>
+  <input type="number" [(ngModel)]="Mount" placeholder="请输入商品数量">
+  <br>
+  <app-list [productName]="name" [productId]="ID" [productMount]="Mount" ></app-list>
+  <ion-button routerLink="/list">点击跳转到list组件</ion-button>
 
   <!-- <app-product></app-product> -->
-  <app-list></app-list>
+  
 
 
   

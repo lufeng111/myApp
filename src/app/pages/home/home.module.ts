@@ -6,6 +6,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 import { HomePage } from './home.page';
 import { ComponentsModule } from '../../components/components.module';
+import { ListComponent } from '../../components/list/list.component'
+import { ProductComponent } from '../../components/product/product.component';
 
 
 
@@ -25,8 +27,11 @@ const routes: Routes = [
     ComponentsModule,
     RouterModule.forChild(routes)
   ],
+  // 在模块中使用某个组件时，模块需要导入，但是组件也需要声明
   declarations: [
     HomePage,
+    // ListComponent,
+    // ProductComponent,
   ],
   // exports: [
   //   ComponentsModule

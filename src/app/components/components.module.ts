@@ -15,7 +15,11 @@ import { IonicModule } from '@ionic/angular';
     ProductComponent,
   ],
   // 第一次编译组件，如果报错entryComponents，就添加注意在home组件使用商品组件，需要entryComponents 引入这个组件
-  // entryComponents: [ProductComponent],
+  // entryComponents: [
+  //   ProductComponent,
+  //   ListComponent,
+  //   PriceComponent,
+  // ],
   // 导入的模块，导入的模块可以在这些模块中直接使用他
   imports: [
     CommonModule
