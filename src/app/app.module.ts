@@ -12,6 +12,7 @@ import { AppComponent } from './app.component';
 // 导入 ComponentsModule 模块，使用ComponentsModule模块导出的组件，管道，指令等
 // import { ComponentsModule } from './components/components.module';
 // import { LoginPage } from './pages/login/login.page'
+// import { DatePicker} from '@ionic-native/date-picker';
 
 
 @NgModule({
@@ -33,6 +34,7 @@ import { AppComponent } from './app.component';
     
   providers: [
     StatusBar,
+    // DatePicker,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
